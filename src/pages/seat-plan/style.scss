@@ -1,0 +1,63 @@
+.container{
+    width: 800px;
+    height: 1000px;
+    margin: 50px auto;
+    text-align: center;
+    border: 3px solid brown;
+    position: relative;
+
+    .title {
+        font-weight: 900;
+        color: dodgerblue;
+
+        &:before, &:after {
+            content: '';
+            position: relative;
+            top: -1px;
+            width: 300px;
+            display: inline-block;
+            border: 1px solid burlywood;
+            margin: 0 10px;
+            vertical-align: middle;
+
+        }
+    }
+
+    // 가로 800px - 40px = 760px
+    .select{
+        height: 30px;
+        margin: 10px 20px;
+        border: 2px solid burlywood;
+
+        .center-box {
+            position: absolute;
+            width:100%;
+            margin: 0 auto;
+            left:-12px;
+            z-index:1;
+        }
+    }
+
+    .box {
+        height:300px;
+        margin: 0 20px;
+        border: 2px solid burlywood;
+        position: relative;
+        line-height: 100%;
+
+        .littleBox {
+            width: 10px;
+            height: 10px;
+            border: 1px solid tomato;
+            float:left;
+            margin:0 0;
+        }
+
+        .colorRed {
+            background-color: red;
+        }
+        
+    }
+
+    
+}

@@ -1,0 +1,54 @@
+.testCss {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 3px solid skyblue;
+    position: relative;
+
+
+    .list-parent {
+        input:checked ~ ul {
+            color:skyblue;
+            display:none;
+        }
+        a:focus ~ ul {
+            color:red;
+        }
+        li:target {
+            color: blue;
+        }
+        
+    }
+    
+    $rgb: (skyblue:skyblue, tomato: tomato);
+
+    .title { 
+        position: relative;
+        text-align: center;
+        color: tomato;
+
+        &:before, &:after {
+            content:'';
+            position: relative;
+            display:inline-block;
+            width:170px;
+            border-top: 1px solid orange;
+            vertical-align: middle;
+            margin: 0 30px;
+        }
+    }
+}
+
+$vendors: webkit, moz, ms, o;
+
+@mixin vender-prefix($name, $value) {
+    @each $vendor in $vendors {
+        -#{$vendor}-#{$name}: $value;
+    }
+    #{$name}: $value;
+}
+
+.list_test {
+    @include vender-prefix(box-sizing, border-box);
+    @include vender-prefix(border-radius, 50%);
+}

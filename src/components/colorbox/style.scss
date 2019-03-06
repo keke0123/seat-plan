@@ -1,0 +1,17 @@
+
+.color-box {
+    position: relative;
+    float: left;
+    border: 2px solid orange;
+    width: 20px;
+    height: 20px;
+    margin: 3px 5px;
+    z-index: 10;
+}
+
+.colorRed {
+    background-color: red;
+}
+.colorBlue {
+    background-color: blue;
+}
