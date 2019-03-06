@@ -38,7 +38,11 @@ export default {
             }
             
         },
-        changeColorMouseOver:function(){
+        changeColorMouseOver:function(e){
+            //console.log(e);
+            if(e.buttons!==1){
+                return
+            }
             if(this.$store.state.dragMouse===true && this.choiceColor==='red'){
                 this.choicedColor='colorRed';
             } else if(this.$store.state.dragMouse===true && this.choiceColor==='blue'){
